@@ -4,9 +4,12 @@
 {% block content %}
   <h1>{% block title %}{% trans "Registration" %}{% endblock %}</h1>
 
-  <form action="" method="POST">
+  <form action="" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
     {% csrf_token %}
     <table>{{ form.as_table }}</table>
+
+     <div style="display: flex; justify-content: space-between;">
     <button class="btn btn-primary" type="submit">{% trans "Register" %}</button>
+    <a href="/" class="btn btn-danger">{% trans "Cancel" %}</a>
   </form>
 {% endblock %}
