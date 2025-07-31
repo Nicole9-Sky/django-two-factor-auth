@@ -1,87 +1,59 @@
-================================
-Django Two-Factor Authentication
-================================
+# 🔐 Django Two-Factor Authentication System
 
-.. image:: https://jazzband.co/static/img/badge.svg
-        :target: https://jazzband.co/
-        :alt: Jazzband
+A secure, production-ready Django application that integrates two-factor authentication (2FA) using time-based one-time passwords (TOTP), QR code setup, and backup tokens. This project allows users to enhance their login security by requiring a second layer of verification via authenticator apps like Google Authenticator, Authy, or Microsoft Authenticator.
 
-.. image:: https://github.com/jazzband/django-two-factor-auth/workflows/build/badge.svg?branch=master
-    :alt: Build Status
-    :target: https://github.com/jazzband/django-two-factor-auth/actions
+## 🧭 Table of Contents
 
-.. image:: https://codecov.io/gh/jazzband/django-two-factor-auth/branch/master/graph/badge.svg
-    :alt: Test Coverage
-    :target: https://codecov.io/gh/jazzband/django-two-factor-auth
+[Features](#-features)
+[Tech Stack](#-tech-stack)
+[Screenshots](#-screenshots)
+[Demo](#-demo)
+[Project Structure](#-project-structure)
+[Getting Started](#-getting-started)
+[Deployment](#-deployment)
+[Contribution](#-contribution)
+[License](#-license)
+[Acknowledgements](#-acknowledgements)
+[Author](#-author)
+## 🚀 Features
 
-.. image:: https://badge.fury.io/py/django-two-factor-auth.svg
-    :alt: PyPI
-    :target: https://pypi.python.org/pypi/django-two-factor-auth
+🔐 Two-factor login (Password + OTP)
+📱 Google Authenticator QR setup
+🧾 Backup codes for recovery
+👩‍💼 Admin & superuser access
+🖼️ Custom UI with frontend styling
+🚫 Prevent unauthorized access
+🧩 Easy to extend into any Django app
+## 🛠️ Technologies Used
 
-Complete Two-Factor Authentication for Django. Built on top of the one-time
-password framework django-otp_ and Django's built-in authentication framework
-``django.contrib.auth`` for providing the easiest integration into most Django
-projects. Inspired by the user experience of Google's Two-Step Authentication,
-allowing users to authenticate through call, text messages (SMS), by using a
-token generator app like Google Authenticator or a YubiKey_ hardware token
-generator (optional).
+Python 3.10+
+Django 4+
+django-otp
+HTML5 / CSS3 / Bootstrap
+SQLite (or PostgreSQL)
+QR Code generation
+**Virtualen
+> _Upload screenshots of:_ - Login page - OTP QR setup page - Backup code interface - Admin panel
 
-If you run into problems, please file an issue on GitHub, or contribute to the
-project by forking the repository and sending some pull requests. The package
-is translated into English, Dutch and other languages. Please contribute your
-own language using Transifex_.
+django-two-factor-auth/ structure │ ├── example/ # Fully working Django demo app │ ├── migrations/ # DB migrations │ ├── templates/ # HTML templates │ │ ├── login.html # Custom login form │ │ ├── base.html # Base template │ │ └── setup.html # 2FA QR Setup │ ├── static/ # CSS, JS, logo assets │ ├── settings.py # Django settings for demo app │ ├── urls.py # URL routes for 2FA pages │ └── views.py # App logic (very minimal) │ ├── two_factor/ # Main package (the 2FA logic) │ ├── admin.py # Admin integration │ ├── forms.py # Setup forms for OTP │ ├── gateways/ # Gateways like SMS, Twilio (optional) │ ├── models.py # Models if needed │ ├── templates/ # Override templates │ ├── urls.py # 2FA URL routing │ ├── utils.py # Helper methods │ └── views/core.py # Core logic for OTP/QR │ ├── docs/ # Documentation ├── tests/ # Unit tests ├── .gitignore ├── requirements_dev.txt # Dev dependencies ├── README.md # This file └── LICENSE
 
-Test drive this app through the `example app`_. It demos most features except
-the Twilio integration. The example also includes django-user-sessions_ for
-providing Django sessions with a foreign key to the user. Although the package
-is optional, it improves account security control over
-``django.contrib.sessions``.
+## 💻 Local Setup
 
-Compatible with supported Django and Python versions. At the moment of writing
-that includes 4.2, 5.0, and 5.1 on Python 3.8 to 3.12.
-Documentation is available at `readthedocs.io`_.
+### 🔧 Prerequisites
 
+Python 3.10+
+Git
+pip
+### 🧪 Installation Steps
 
-Installation
-============
-Refer to the `installation instructions`_ in the documentation.
+```bash # Clone your fork git clone https://github.com/YOUR_USERNAME/django-two-factor-auth.git cd django-two-factor-auth
 
+# Create virtual environment python3 -m venv venv source venv/bin/activate # or venvScriptsactivate on Windows
 
-Getting help
-============
+# Install dependencies pip install -r requirements_dev.txt
 
-For general questions regarding this package, please hop over to `Stack Overflow`_.
-If you think there is an issue with this package; check if the
-issue is already listed (either open or closed), and file an issue if
-it's not.
+# Migrate and run example app cd example python manage.py migrate python manage.py createsuperuser python manage.py runserver
 
+Local-Host - (http://127.0.0.1:8000/)
 
-Contribute
-==========
-Read the `contribution guidelines`_.
-
-
-See Also
-========
-Have a look at django-user-sessions_ for Django sessions with a foreign key to
-the user. This package is also included in the `example app`_.
-
-
-License
-=======
-The project is licensed under the MIT license.
-
-.. _`example app`:
-   https://github.com/jazzband/django-two-factor-auth/tree/master/example
-.. _django-otp: https://pypi.org/project/django-otp/
-.. _Transifex: https://explore.transifex.com/Bouke/django-two-factor-auth/
-.. _Twilio: https://www.twilio.com/
-.. _contribution guidelines:
-   https://github.com/jazzband/django-two-factor-auth/blob/master/CONTRIBUTING.rst
-.. _django-user-sessions: https://pypi.org/project/django-user-sessions/
-.. _readthedocs.io: https://django-two-factor-auth.readthedocs.io/en/stable/index.html
-.. _`installation instructions`:
-   https://django-two-factor-auth.readthedocs.io/en/stable/installation.html
-.. _`Stack Overflow`:
-   https://stackoverflow.com/questions/tagged/django-two-factor-auth
-.. _Yubikey: https://www.yubico.com/products/yubikey-hardware/
+## 📷 Screenshots {Home.page} - https://github.com/Nicole9-Sky/django-two-factor-auth/blob/master/HOME%20(2).png {Login.page} - https://github.com/Nicole9-Sky/django-two-factor-auth/blob/master/LOGIN.png {Registration} - https://github.com/Nicole9-Sky/django-two-factor-auth/blob/master/REGISTRATION.png
