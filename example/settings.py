@@ -1,6 +1,6 @@
 import os
 
-DEBUG = True
+DEBUG = False
 
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
@@ -22,7 +22,7 @@ TIME_ZONE = 'Europe/Amsterdam'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'DO NOT USE THIS KEY!'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = https://django-two-factor-auth-1.onrender.com']
 
 MIDDLEWARE = (
     'django.middleware.common.CommonMiddleware',
