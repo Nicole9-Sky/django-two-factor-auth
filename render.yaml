@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: django-two-factor-auth
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn example.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: example.settings
