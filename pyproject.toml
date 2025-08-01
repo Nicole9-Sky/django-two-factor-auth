@@ -5,15 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "django-two-factor-auth"
 version = "1.17.0"
-description = "Complete Two-Factor Authentication for Django"
-readme = "README.rst"
+description = "Secure Two-Factor Authentication for Django by Django"
+readme = "README.md"
 authors = [
-  {name = "Bouke Haarsma", email = "bouke@haarsma.eu"},
+  {name = "django-two-factor-auth", email = "cezeh247@gmail.com"},
 ]
-maintainers = [
-  {name = "Claude Paroz", email = "claude@2xlibre.net"},
-  {name = "Matt Molyneaux", email = "moggers87+git@moggers87.co.uk"},
-]
+
 license = {text = "MIT"}
 requires-python = ">= 3.9"
 dependencies = [
@@ -74,9 +71,8 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jazzband/django-two-factor-auth"
-Documentation = "https://django-two-factor-auth.readthedocs.io/en/stable/"
-Changelog = "https://github.com/jazzband/django-two-factor-auth/blob/master/CHANGELOG.md"
+Homepage = "https://github.com/Nicole9-Sky/django-two-factor-auth"
+Documentation = "https://github.com/Nicole9-Sky/django-two-factor-auth#readme"
 
 [tool.ruff]
 line-length = 119
@@ -88,7 +84,7 @@ select = [
     "F",  # Pyflakes
     "E",  # pycodestyle (Error)
     "W",  # pycodestyle (Warning)
-    # "I",  # isort (waiting for https://github.com/astral-sh/ruff/issues/2600)
+    # "I",  # isort (waiting for https://github.com/Nicole9-Sky/django-two-factor-auth.git)
 ]
 
 # [tool.ruff.lint.isort]

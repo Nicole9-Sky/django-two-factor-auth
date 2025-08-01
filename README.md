@@ -1,5 +1,8 @@
 # 🔐 Django Two-Factor Authentication System
 
+This project was customized from the popular `django-two-factor-auth` library but completely rebranded and restructured to reflect a modern, secure, and user-focused 2FA system for professional Django applications.
+
+
 A secure, production-ready Django application that integrates two-factor authentication (2FA) using time-based one-time passwords (TOTP), QR code setup, and backup tokens. This project allows users to enhance their login security by requiring a second layer of verification via authenticator apps like Google Authenticator, Authy, or Microsoft Authenticator.
 
 ## 🧭 Table of Contents
@@ -15,6 +18,9 @@ A secure, production-ready Django application that integrates two-factor authent
 [License](#-license)
 [Acknowledgements](#-acknowledgements)
 [Author](#-author)
+
+> A fully customizable Django-based Two-Factor Authentication (2FA) system — built, branded, and refined by **Chioma Ezeh**.
+
 ## 🚀 Features
 
 🔐 Two-factor login (Password + OTP)

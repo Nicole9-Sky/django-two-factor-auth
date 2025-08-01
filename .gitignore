@@ -11,3 +11,37 @@ example/settings_private.py
 .eggs/
 
 .idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.log
+*.pot
+*.pyc
+
+# Environment
+env/
+venv/
+.env
+.env.*
+
+# VSCode / PyCharm / macOS / Windows
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Test & Coverage
+.coverage
+/.coverage.*
+.tox/
+htmlcov/
+
+# Docs
+/docs/_build/
+/dist/
+
+# Migrations (Optional – keep if you want full control)
+**/migrations/__pycache__/
