@@ -22,7 +22,7 @@ TIME_ZONE = 'Europe/Amsterdam'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'DO NOT USE THIS KEY!'
 
-ALLOWED_HOSTS = ['https://django-two-factor-auth-1.onrender.com']
+ALLOWED_HOSTS = ['django-two-factor-auth-1.onrender.com']
 
 MIDDLEWARE = (
     'django.middleware.common.CommonMiddleware',
