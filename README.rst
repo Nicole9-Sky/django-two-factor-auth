@@ -58,4 +58,6 @@ Local-Host - (http://127.0.0.1:8000/)
 
 ## 📷 Screenshots {Home.page} - https://github.com/Nicole9-Sky/django-two-factor-auth/blob/master/HOME%20(2).png {Login.page} - https://github.com/Nicole9-Sky/django-two-factor-auth/blob/master/LOGIN.png {Registration} - https://github.com/Nicole9-Sky/django-two-factor-auth/blob/master/REGISTRATION.png
 
-🔗 [Click to View live](https://django-two-factor-auth-1.onrender.com)
+## 🌐 Live Demo
+
+🔗 [View Live Project on Render](https://django-two-factor-auth-1.onrender.com)
